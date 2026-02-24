@@ -63,7 +63,7 @@ const faqs = [
     {
         question: "How much does Numi cost?",
         answer:
-            "You can try Numi for free for 7 days. After that, it\u2019s a simple $7/month subscription to help you maintain your daily walk with God. No hidden fees, cancel anytime.",
+            "Numi has a free tier with daily morning/midday/evening texts plus 30 messages per month. Numi Plus is $9.99/month or $99/year and includes unlimited conversation, full memory, custom rhythms, and specialized tracks.",
     },
     {
         question: "How does the memory feature work?",
@@ -721,7 +721,7 @@ export default function IndividualsPage() {
 
                 {/* ── Pricing Callout ───────────────────────────────────── */}
                 <section className="py-20 px-6 bg-white border-t border-slate-100">
-                    <div className="mx-auto max-w-4xl text-center">
+                    <div className="mx-auto max-w-5xl text-center">
                         <motion.h2
                             variants={fadeUp}
                             initial="hidden"
@@ -738,7 +738,64 @@ export default function IndividualsPage() {
                             viewport={{ once: true }}
                             className="mt-4 text-lg text-slate-600 font-medium"
                         >
-                            $7/month after a 7-day free trial.
+                            Start free, then upgrade to Numi Plus whenever you want.
+                        </motion.p>
+
+                        <motion.div
+                            variants={stagger}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true }}
+                            className="mt-12 grid gap-6 text-left md:grid-cols-2"
+                        >
+                            <motion.div
+                                variants={fadeUp}
+                                className="rounded-2xl border border-slate-100 bg-slate-50 p-6 shadow-sm"
+                            >
+                                <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                                    Free
+                                </div>
+                                <div className="mt-4 text-3xl font-bold text-slate-900">$0</div>
+                                <p className="mt-2 text-slate-600 font-medium">
+                                    Daily morning/midday/evening texts
+                                </p>
+                                <p className="mt-1 text-sm text-slate-500">30 messages per month</p>
+                            </motion.div>
+
+                            <motion.div
+                                variants={fadeUp}
+                                className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm"
+                            >
+                                <div className="text-xs font-bold uppercase tracking-[0.2em] text-vibrant-cyan">
+                                    Numi Plus
+                                </div>
+                                <div className="mt-4 text-3xl font-bold text-slate-900">
+                                    $9.99<span className="text-base font-semibold text-slate-500">/mo</span>
+                                </div>
+                                <p className="mt-2 text-slate-600 font-medium">$99/year</p>
+                                <p className="mt-2 text-sm text-slate-500">
+                                    Unlimited conversation, full memory, custom rhythms, specialized tracks
+                                </p>
+                            </motion.div>
+                        </motion.div>
+
+                        <motion.p
+                            variants={fadeUp}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true }}
+                            className="mt-6 text-sm text-slate-500"
+                        >
+                            Gift Numi to a friend, or share it with your small group.
+                        </motion.p>
+                        <motion.p
+                            variants={fadeUp}
+                            initial="hidden"
+                            whileInView="show"
+                            viewport={{ once: true }}
+                            className="mt-2 text-sm text-slate-500"
+                        >
+                            Part of a church using Numi? Ask your pastor — you may already have full access.
                         </motion.p>
                     </div>
                 </section>
